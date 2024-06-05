@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./lib/themes/theme.min.css">
+    <link rel="stylesheet" href="./lib/jquery.mobile.icons-1.4.5.min.css">
+    <link rel="stylesheet" href="./lib/jquery.mobile.structure-1.4.5.min.css">
+    <title>Liste des tâches</title>
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="./js/index.js" defer></script>
+</head>
+
+<body>
+    <div data-role="page" id="taskPage">
+        <div data-role="header">
+            <h1>Liste des tâches</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <fieldset>
+                <label for="taskFieldText">Ajouter une tâche</label>
+                <input type="text" name="taskFieldText" id="taskFieldText">
+            </fieldset>
+            <input type="button" value="Ajouter" onclick="addTask()">
+            <input type="button" value="Réinitialiser" onclick="resetList()">
+            <div>
+                <div data-role="header">
+                    <h2>Tâches en cours</h2>
+                </div>
+                <ul data-inset="true" id="taskList" data-role="listview">
+                </ul>
+                <div data-role="header">
+                    <h2>Tâches terminées</h2>
+                </div>
+                <ul data-inset="true" id="completedTaskList" data-role="listview">
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
